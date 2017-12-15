@@ -105,6 +105,7 @@ namespace MissionSiteProject.Controllers
         {
             if (missionQuestionID != null)
             {
+                answer = answer.Replace("'", "''");
                 db.Database.ExecuteSqlCommand("UPDATE MissionQuestions SET mqAnswer = '" + answer + "' WHERE missionQuestionID = " + missionQuestionID + ";");
             }
             return RedirectToAction("ViewFAQ", "Mission", missionName);
