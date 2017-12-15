@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Missions";
+}
+
+
+<nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Missions</li>
+    </ol>
+</nav>
+
+<h1>Missions</h1>
+
+<!-- DROPDOWN THAT CONTAINS THREE MISSIONS -->
+
+
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select a Mission
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" href="@Url.Action("ViewMission", "Mission", new { mission = "Korea Daejeon" })">Korea Daejeon</a></li>
+        <li><a class="dropdown-item" href="@Url.Action("ViewMission", "Mission", new { mission = "Russia Rostov-na-Donu" })">Russia Rostov</a></li>
+        <li><a class="dropdown-item" href="@Url.Action("ViewMission", "Mission", new { mission = "Ohio Cincinnati" })">Ohio Cincinnati</a></li>
+    </ul>
+</div>
+
+<br />
+
+<img src="~/Content/images/map.jpg" width="750" />
+
+
+
+<!-- LINKS FOR THE CORRESPONDING MISSION VIEW-->
+<!--Html.ActionLink("Mission 1", "ViewMission", "Mission", new { mission = "Mission1" }, new { class = "btn btn-primary btn-lg" })-->
+<!--Html.ActionLink("Mission 2", "ViewMission", "Mission", new { mission = "Mission2" }, new { class = "btn btn-primary btn-lg" })-->
+<!--Html.ActionLink("Mission 3", "ViewMission", "Mission", new { mission = "Mission3" }, new { class = "btn btn-primary btn-lg" })-->

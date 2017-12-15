@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Contact Called to Serve";
+}
+<center>
+    <h1>@ViewBag.Title</h1>
+
+    <address>
+        4095 North 6175 East<br />
+        Provo, UT 84604<br />
+        801-123-4567
+    </address>
+
+    <address>
+        <strong>Email Support:</strong>   <a href="mailto:Support@calledtoserve.com">support@calledtoserve.com</a><br />
+    </address>
+
+    <h3>Send us a Message</h3>
+
+    <form method="get">
+        <div class="form-group">
+            <!-- Name field -->
+            <label class="control-label requiredField" for="name">Name</label>
+            <input class="form-control" id="name" name="name" type="text" />
+        </div>
+
+        <div class="form-group">
+            <!-- Email field -->
+            <label class="control-label requiredField" for="email">Email</label>
+            <input class="form-control" id="email" name="email" type="email" />
+        </div>
+
+        <div class="dropdown">
+            <select class="dropdown btn btn-md">
+                <option>*Comment Category*</option>
+                <option value="general questions"> General Questions</option>
+                <option value="mission unavailable"> Mission Unavailable</option>
+                <option value="tech support">Tech support</option>
+
+            </select>
+        </div>
+        <br />
+
+        <div class="form-group">
+            <!-- Message field -->
+            <label class="control-label " for="message">Message</label>
+            <textarea class="form-control" cols="40" id="message" name="message" rows="8"></textarea>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary " name="submit" type="submit" value="Submit">Submit</button>
+        </div>
+    </form>
+</center>

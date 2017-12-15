@@ -1,0 +1,47 @@
+﻿@model IEnumerable<IS403Project2.Models.MissionQuestions>
+
+@{
+    ViewBag.Title = "Mission FAQ";
+}
+
+<h2>@ViewBag.missionName Mission</h2>
+
+<h2>Frequently Asked Questions</h2>
+
+@foreach (var item in Model)
+{
+    <table class="table">
+        <tr>
+            <th style="font-size:25px;">
+                @Html.DisplayFor(modelItem => item.mqQuestion)
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.mqAnswer)
+                <br /><br />
+                @using (Html.BeginForm("AnswerQuestion", "Mission", FormMethod.Post, new { id = item.missionQuestionID }))
+                {
+                    @Html.Label("Answer this Question")
+                    <input autofocus style="display:block" class="form-control" type="text" id="answer" name="answer" value="" />
+                            <input style="display:none" type="number" id="missionQuestionID" name="missionQuestionID" value="@item.missionQuestionID" />
+                            <br />
+                            <input class="btn btn-default" type="submit" value="Submit" />
+                }
+            </td>
+        </tr>
+    </table>
+}
+
+<br />
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <a href="@Url.Action("AskQuestion", new { missionID = ViewBag.missionID })" class="btn btn-primary">Ask a Question</a>
+
+        </div>
+    </div>
+</div>
+

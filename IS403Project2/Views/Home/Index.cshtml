@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Home</li>
+    </ol>
+</nav>
+
+<div class="jumbotron">
+    <h1>Called to Serve</h1>
+    <p class="lead">You are anxious to serve, let us help you prepare.</p>
+    <!--<p><a href="" class="btn btn-default btn-lg">Begin Preparation &raquo;</a></p>-->
+    <p>@Html.ActionLink("Create Account", "CreateUser", "Home", null, new { @class = "btn btn-default btn-lg" })</p>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="">
+            <h2 style="text-align:center;">Missionary Purpose</h2>
+            <p style="font-size:30px;font-family:Calibri;font-style:italic;color:darkgrey;text-align:center;">
+                "Invite others to come unto Christ by helping them receive the restored gospel through faith in
+                Jesus Christ and His Atonement, repentance, baptism, receiving the gift of the Holy Ghost, and enduring to the end."
+            </p>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="350" src="https://www.youtube.com/embed/ckLqfX62u_I?autoplay=1&rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="text-align:center; margin-top: 20px; padding-top: 10px; padding-bottom:10px; background-color:#f2f2f2;">
+        <h2>View Your Mission</h2>
+        <h4>
+            Visit your mission page to see the info about your mission
+        </h4>
+        <p>@Html.ActionLink("View Missions", "Missions", "Mission", null, new { @class = "btn btn-primary btn-lg" })</p>
+
+    </div>
+</div>
